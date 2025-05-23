@@ -43,6 +43,11 @@ const About = () => {
           >
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent-500 to-primary-500 rounded-3xl -rotate-3 opacity-20"></div>
+              <img
+                src="assets/Me2.jpeg"
+                alt="Working at computer"
+                className="relative z-10 w-full shadow-xl rounded-2xl"
+              />
               <div className="absolute z-20 p-4 bg-white shadow-lg -top-6 -left-6 dark:bg-dark-900 rounded-xl">
                 <p className="font-bold">Problem Solver</p>
                 <p className="text-sm text-dark-500 dark:text-dark-400">

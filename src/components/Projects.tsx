@@ -61,8 +61,8 @@ const getProjects = (theme: string | null): Project[] => {
           ? "assets/portfolio-dark.png"
           : "assets/portfolio-light.png",
       technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
-      github: "https://github.com",
-      live: "",
+      github: "https://github.com/Anthiel04/portfolio",
+      live: "#",
       category: "frontend",
     },
     {
@@ -77,10 +77,10 @@ const getProjects = (theme: string | null): Project[] => {
       category: "frontend",
     },
     {
-      id: 6,
+      id: 7,
       title: "Simple Login",
       description: "One of my first projects a simple login with basic tools",
-      image: "assets/meme-generator.png",
+      image: "assets/vanilla.png",
       technologies: ["JS", "CSS", "HTML"],
       github: "https://github.com/Anthiel04/Vanilla-Login",
       live: "#",
