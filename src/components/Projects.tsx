@@ -9,7 +9,7 @@ const getProjects = (theme: string | null): Project[] => {
       id: 1,
       title: "E-Commerce Platform",
       description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
+        "A full-featured e-commerce platform with product management and cart functionality.",
       image: "assets/K-Mart.png",
       technologies: ["React", "Node.js", "SQLite", "Express", "TypeScript"],
       github: "#",
@@ -42,14 +42,12 @@ const getProjects = (theme: string | null): Project[] => {
     {
       id: 4,
       title: "Happy Birthday",
-      description:
-        "A scalable API gateway for microservices with authentication, rate limiting, and request routing.",
-      image:
-        "https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      technologies: ["Node.js", "Express", "Redis", "Docker"],
-      github: "https://github.com",
-      live: "https://example.com",
-      category: "backend",
+      description: "A funny and wholesome Happy Birthday website.",
+      image: "assets/happybd.png",
+      technologies: ["React"],
+      github: "https://github.com/Anthiel04/happybd",
+      live: "https://anthiel04.github.io/happybd/",
+      category: "frontend",
     },
     {
       id: 5,
@@ -68,8 +66,7 @@ const getProjects = (theme: string | null): Project[] => {
     {
       id: 6,
       title: "Meme Generator",
-      description:
-        "A headless CMS with a customizable admin panel and API-first approach.",
+      description: "A simple Meme Generator",
       image: "assets/meme-generator.png",
       technologies: ["React"],
       github: "https://github.com/Anthiel04/meme_generator",
@@ -85,6 +82,28 @@ const getProjects = (theme: string | null): Project[] => {
       github: "https://github.com/Anthiel04/Vanilla-Login",
       live: "#",
       category: "frontend",
+    },
+    {
+      id: 8,
+      title: "Simple Class Form",
+      description: "One of my first projects a simple stylized form",
+      image: "assets/stylizedform.png",
+      technologies: ["JS", "CSS", "HTML"],
+      github: "https://github.com/Anthiel04/classform",
+      live: "#",
+      category: "frontend",
+    },
+    {
+      id: 3,
+      title: "Upydate",
+      description:
+        "A useful script that automatically downloads av updates, features resume of downloads and scraps on repos",
+      image:
+        "https://images.unsplash.com/photo-1624953587687-daf255b6b80a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["Python"],
+      github: "https://github.com/Anthiel04/upydate",
+      live: "#",
+      category: "misc",
     },
   ];
 };
