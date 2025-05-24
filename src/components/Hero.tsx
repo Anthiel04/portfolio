@@ -101,7 +101,7 @@ const Hero = () => {
             <div className="relative max-w-md mx-auto aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl rotate-6 opacity-20"></div>
               <img
-                src="assets/Me.jpeg"
+                src="assets/Me.webp"
                 alt="William Hernandez"
                 className="relative z-10 object-cover w-full h-full shadow-xl rounded-2xl"
               />

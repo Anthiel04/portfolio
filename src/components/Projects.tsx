@@ -10,7 +10,7 @@ const getProjects = (theme: string | null): Project[] => {
       title: "E-Commerce Platform",
       description:
         "A full-featured e-commerce platform with product management and cart functionality.",
-      image: "assets/K-Mart.png",
+      image: "assets/K-Mart.webp",
       technologies: ["React", "Node.js", "SQLite", "Express", "TypeScript"],
       github: "#",
       live: "https://kweb-front.vercel.app/",
@@ -21,7 +21,7 @@ const getProjects = (theme: string | null): Project[] => {
       title: "Alpaca Generator",
       description:
         "A funny Alpaca Generator, personalized downloadable squared profile pics.",
-      image: "assets/alpaca-image.png",
+      image: "assets/alpaca-image.webp",
       technologies: ["React", "Tailwind CSS"],
       github: "https://github.com",
       live: "https://alpaca-ionic-react-kw6l.vercel.app/",
@@ -29,7 +29,7 @@ const getProjects = (theme: string | null): Project[] => {
     },
     {
       id: 3,
-      title: "JSONtoVCF Converter for Telegram contacts",
+      title: "JSONtoVCF for Telegram",
       description:
         "A useful script that converts JSON data to VCF format for easy import into the contacts app.",
       image:
@@ -43,7 +43,7 @@ const getProjects = (theme: string | null): Project[] => {
       id: 4,
       title: "Happy Birthday",
       description: "A funny and wholesome Happy Birthday website.",
-      image: "assets/happybd.png",
+      image: "assets/happybd.webp",
       technologies: ["React"],
       github: "https://github.com/Anthiel04/happybd",
       live: "https://anthiel04.github.io/happybd/",
@@ -56,8 +56,8 @@ const getProjects = (theme: string | null): Project[] => {
         "A modern portfolio website with smooth animations and responsive design.",
       image:
         theme === "dark"
-          ? "assets/portfolio-dark.png"
-          : "assets/portfolio-light.png",
+          ? "assets/portfolio-dark.webp"
+          : "assets/portfolio-light.webp",
       technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
       github: "https://github.com/Anthiel04/portfolio",
       live: "#",
@@ -67,7 +67,7 @@ const getProjects = (theme: string | null): Project[] => {
       id: 6,
       title: "Meme Generator",
       description: "A simple Meme Generator",
-      image: "assets/meme-generator.png",
+      image: "assets/meme-generator.webp",
       technologies: ["React"],
       github: "https://github.com/Anthiel04/meme_generator",
       live: "https://meme-generator-coral-pi.vercel.app/",
@@ -77,7 +77,7 @@ const getProjects = (theme: string | null): Project[] => {
       id: 7,
       title: "Simple Login",
       description: "One of my first projects a simple login with basic tools",
-      image: "assets/vanilla.png",
+      image: "assets/vanilla.webp",
       technologies: ["JS", "CSS", "HTML"],
       github: "https://github.com/Anthiel04/Vanilla-Login",
       live: "#",
@@ -87,14 +87,14 @@ const getProjects = (theme: string | null): Project[] => {
       id: 8,
       title: "Simple Class Form",
       description: "One of my first projects a simple stylized form",
-      image: "assets/stylizedform.png",
+      image: "assets/stylizedform.webp",
       technologies: ["JS", "CSS", "HTML"],
       github: "https://github.com/Anthiel04/classform",
       live: "#",
       category: "frontend",
     },
     {
-      id: 3,
+      id: 9,
       title: "Upydate",
       description:
         "A useful script that automatically downloads av updates, features resume of downloads and scraps on repos",
@@ -102,6 +102,43 @@ const getProjects = (theme: string | null): Project[] => {
         "https://images.unsplash.com/photo-1624953587687-daf255b6b80a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       technologies: ["Python"],
       github: "https://github.com/Anthiel04/upydate",
+      live: "#",
+      category: "misc",
+    },
+    {
+      id: 10,
+      title: "MiTienda",
+      description:
+        "Contributed migration of the project repo, frontend and backend, the website is for a shop",
+      image:
+        "https://images.unsplash.com/photo-1624953587687-daf255b6b80a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["React", "Tailwind CSS", "Vite", "Nest", "Framer-Motion"],
+      github: "#",
+      live: "#",
+      category: "fullstack",
+    },
+    {
+      id: 11,
+      title: "TechServ",
+      description: "A website that has a list of services",
+      image:
+        theme === "dark"
+          ? "assets/services-dark.webp"
+          : "assets/services-light.webp",
+      technologies: ["React", "Tailwind"],
+      github: "https://github.com/Anthiel04/techserv",
+      live: "https://anthiel04.github.io/techserv/",
+      category: "frontend",
+    },
+    {
+      id: 12,
+      title: "toWebp",
+      description:
+        "A useful script that automatically converts jpeg and png to webp",
+      image:
+        "https://images.unsplash.com/photo-1624953587687-daf255b6b80a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["Python"],
+      github: "https://github.com/Anthiel04/towebp",
       live: "#",
       category: "misc",
     },

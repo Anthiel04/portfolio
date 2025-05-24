@@ -28,8 +28,8 @@ const About = () => {
           </span>
           <h2 className="mb-6">My Journey as a Developer</h2>
           <p className="max-w-3xl mx-auto text-lg text-dark-600 dark:text-dark-300">
-            With over 5 years of experience in web development, I've cultivated
-            a passion for creating efficient, beautiful, and user-focused
+            With over a year of experience in web development, I've cultivated a
+            passion for creating efficient, beautiful, and user-focused
             applications.
           </p>
         </motion.div>
@@ -44,7 +44,7 @@ const About = () => {
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent-500 to-primary-500 rounded-3xl -rotate-3 opacity-20"></div>
               <img
-                src="assets/Me2.jpeg"
+                src="assets/Me2.webp"
                 alt="Working at computer"
                 className="relative z-10 w-full shadow-xl rounded-2xl"
               />
