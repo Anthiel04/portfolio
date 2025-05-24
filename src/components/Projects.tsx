@@ -37,7 +37,7 @@ const getProjects = (theme: string | null): Project[] => {
       technologies: ["Python"],
       github: "https://github.com/Anthiel04/JSONtoVCF-tg",
       live: "#",
-      category: "misc",
+      category: "soft",
     },
     {
       id: 4,
@@ -65,36 +65,6 @@ const getProjects = (theme: string | null): Project[] => {
     },
     {
       id: 6,
-      title: "Meme Generator",
-      description: "A simple Meme Generator",
-      image: "assets/meme-generator.webp",
-      technologies: ["React"],
-      github: "https://github.com/Anthiel04/meme_generator",
-      live: "https://meme-generator-coral-pi.vercel.app/",
-      category: "frontend",
-    },
-    {
-      id: 7,
-      title: "Simple Login",
-      description: "One of my first projects a simple login with basic tools",
-      image: "assets/vanilla.webp",
-      technologies: ["JS", "CSS", "HTML"],
-      github: "https://github.com/Anthiel04/Vanilla-Login",
-      live: "#",
-      category: "frontend",
-    },
-    {
-      id: 8,
-      title: "Simple Class Form",
-      description: "One of my first projects a simple stylized form",
-      image: "assets/stylizedform.webp",
-      technologies: ["JS", "CSS", "HTML"],
-      github: "https://github.com/Anthiel04/classform",
-      live: "#",
-      category: "frontend",
-    },
-    {
-      id: 9,
       title: "Upydate",
       description:
         "A useful script that automatically downloads av updates, features resume of downloads and scraps on repos",
@@ -103,10 +73,10 @@ const getProjects = (theme: string | null): Project[] => {
       technologies: ["Python"],
       github: "https://github.com/Anthiel04/upydate",
       live: "#",
-      category: "misc",
+      category: "soft",
     },
     {
-      id: 10,
+      id: 7,
       title: "MiTienda",
       description:
         "Contributed migration of the project repo, frontend and backend, the website is for a shop",
@@ -118,7 +88,7 @@ const getProjects = (theme: string | null): Project[] => {
       category: "fullstack",
     },
     {
-      id: 11,
+      id: 8,
       title: "TechServ",
       description: "A website that has a list of services",
       image:
@@ -131,7 +101,7 @@ const getProjects = (theme: string | null): Project[] => {
       category: "frontend",
     },
     {
-      id: 12,
+      id: 9,
       title: "toWebp",
       description:
         "A useful script that automatically converts jpeg and png to webp",
@@ -140,7 +110,7 @@ const getProjects = (theme: string | null): Project[] => {
       technologies: ["Python"],
       github: "https://github.com/Anthiel04/towebp",
       live: "#",
-      category: "misc",
+      category: "soft",
     },
   ];
 };
@@ -153,7 +123,7 @@ interface Project {
   technologies: string[];
   github: string;
   live: string;
-  category: "frontend" | "fullstack" | "backend" | "misc" | "all";
+  category: "frontend" | "fullstack" | "backend" | "soft" | "all";
 }
 
 const Projects = () => {
@@ -184,7 +154,7 @@ const Projects = () => {
   }, []);
 
   const [filter, setFilter] = useState<
-    "all" | "frontend" | "backend" | "fullstack" | "misc"
+    "all" | "frontend" | "backend" | "fullstack" | "soft"
   >("all");
 
   const filteredProjects = projects.filter((project) =>
@@ -275,16 +245,16 @@ const Projects = () => {
               Fullstack
             </motion.button>
             <motion.button
-              onClick={() => setFilter("misc")}
+              onClick={() => setFilter("soft")}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === "misc"
+                filter === "soft"
                   ? "bg-primary-500 text-white"
                   : "bg-white dark:bg-dark-900 hover:bg-dark-100 dark:hover:bg-dark-700"
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Misc
+              Soft
             </motion.button>
           </div>
         </motion.div>
