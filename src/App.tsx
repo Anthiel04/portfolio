@@ -43,7 +43,7 @@ function App() {
     <AnimatePresence mode="wait">
       <div className="flex flex-col min-h-screen">
         <Header theme={theme} toggleTheme={toggleTheme} />
-        <main>
+        <main className="my-3">
           <Hero />
           <About />
           <Skills />
