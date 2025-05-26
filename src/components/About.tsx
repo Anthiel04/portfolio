@@ -44,7 +44,7 @@ const About = () => {
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent-500 to-primary-500 rounded-3xl -rotate-3 opacity-20"></div>
               <img
-                src="assets/Me2.webp"
+                src="https://imgs.search.brave.com/lPIbMfAWXR_E1kJArfFQqx6ZCmf7Ix_Harvjp9_lJR4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTA0/NzI1OTM3NC9waG90/by9wcm9ncmFtbWlu/Zy1zb3VyY2UtY29k/ZS1hYnN0cmFjdC1i/YWNrZ3JvdW5kLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0w/N0RBRml1akNiNTha/Z3U1WkFyTHBySGlT/S2V3NXBDR3FiVG5v/cDlHY2xBPQ"
                 alt="Working at computer"
                 className="relative z-10 w-full shadow-xl rounded-2xl"
               />

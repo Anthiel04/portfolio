@@ -25,16 +25,17 @@ const Skills = () => {
   const frontendSkills = [
     { name: "HTML", level: 80 },
     { name: "CSS", level: 78 },
-    { name: "JavaScript", level: 95 },
-    { name: "TypeScript", level: 71 },
+    { name: "JavaScript", level: 85 },
+    { name: "TypeScript", level: 51 },
     { name: "React", level: 92 },
-    { name: "Next.js", level: 85 },
-    { name: "HTML/CSS", level: 98 },
+    { name: "Next.js", level: 56 },
     { name: "Tailwind CSS", level: 78 },
     { name: "Framer Motion", level: 54 },
-    { name: "ShadCN", level: 89 },
-    { name: "Spline", level: 20 },
+    { name: "Tanstack/React Query", level: 50 },
+    { name: "Vue", level: 23 },
+    { name: "Nuxt", level: 25 },
     { name: "Three.js", level: 25 },
+    { name: "Spline", level: 20 },
   ];
 
   const backendSkills = [
