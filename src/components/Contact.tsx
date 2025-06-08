@@ -1,53 +1,12 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Mail, Send, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      // Reset the success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
-
   const variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -73,14 +32,13 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <motion.div
-            className="md:col-span-1"
+          className="flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="p-8 bg-white shadow-lg dark:bg-dark-900 rounded-xl">
+            <div className="p-8 bg-white max m-auto max-w-xl dark:bg-dark-900">
               <h3 className="mb-6 text-2xl font-bold">Contact Information</h3>
 
               <div className="space-y-6">
@@ -202,130 +160,7 @@ const Contact = () => {
               </div>
             </div>
           </motion.div>
-
-          <motion.div
-            className="md:col-span-2"
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <div className="p-8 bg-white shadow-lg dark:bg-dark-900 rounded-xl">
-              <h3 className="mb-6 text-2xl font-bold">Send Me a Message</h3>
-
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="p-6 text-green-700 bg-green-100 rounded-lg dark:bg-green-900/30 dark:text-green-400"
-                >
-                  <p className="text-lg font-medium">
-                    Message sent successfully!
-                  </p>
-                  <p className="mt-2">
-                    Thank you for reaching out. I'll get back to you as soon as
-                    possible.
-                  </p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block mb-2 text-sm font-medium"
-                      >
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white border rounded-lg border-dark-200 dark:border-dark-700 dark:bg-dark-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block mb-2 text-sm font-medium"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white border rounded-lg border-dark-200 dark:border-dark-700 dark:bg-dark-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        placeholder="Your email"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block mb-2 text-sm font-medium"
-                    >
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-white border rounded-lg border-dark-200 dark:border-dark-700 dark:bg-dark-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                      placeholder="Subject"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block mb-2 text-sm font-medium"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 bg-white border rounded-lg border-dark-200 dark:border-dark-700 dark:bg-dark-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                      placeholder="Your message..."
-                    ></textarea>
-                  </div>
-
-                  <motion.button
-                    type="submit"
-                    className="inline-flex items-center gap-2 btn-primary"
-                    disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        Send Message <Send size={16} />
-                      </>
-                    )}
-                  </motion.button>
-                </form>
-              )}
-            </div>
-          </motion.div>
         </div>
-      </div>
     </section>
   );
 };

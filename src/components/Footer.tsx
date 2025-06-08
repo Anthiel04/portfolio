@@ -107,13 +107,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-6 mt-10 text-center border-t border-dark-800">
-          <p className="flex items-center justify-center gap-1 text-sm text-dark-400">
-            Made with{" "}
-            <Heart size={14} className="text-red-500" fill="currentColor" />{" "}
-            using React, TypeScript & Tailwind
-          </p>
-        </div>
+      
       </div>
     </motion.footer>
   );
